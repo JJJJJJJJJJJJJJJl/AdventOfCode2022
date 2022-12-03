@@ -9,7 +9,7 @@ int group_badge(vector<string> &group_rucksacks){
     int group_badge = 0;
     int * item_occs = (int *)(size_t)malloc(sizeof(int) * VOCAB_ZIZE);
     bool * counted = (bool *)malloc(sizeof(bool) * VOCAB_ZIZE);
-    memset(counted, 0, sizeof(int) * VOCAB_ZIZE);
+    memset(item_occs, 0, sizeof(int) * VOCAB_ZIZE);
     memset(counted, false, sizeof(bool) * VOCAB_ZIZE);
     for(int rucksack_index=0; rucksack_index<3; rucksack_index++){
         int n = group_rucksacks[rucksack_index].length();
