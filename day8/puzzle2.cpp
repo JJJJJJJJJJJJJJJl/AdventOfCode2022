@@ -20,8 +20,6 @@ int main(){
             scores[i][j] = 1;
         }
     }
-    // corner trees already counted
-    int ans = INT_MIN;
 
     // bro fck this im going the stupid way...I'm sure my M1 mac will take care of it xDDD
     for(int i=1; i<N-1; i++){
@@ -84,6 +82,7 @@ int main(){
         }
     }
 
+    int ans = INT_MIN;
     for(int i=0; i<N; i++){
         for(int j=0; j<N; j++){
             ans = max(ans, scores[i][j]);
