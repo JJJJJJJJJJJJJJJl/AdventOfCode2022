@@ -86,8 +86,6 @@ int main(){
         visited.push_back(row_visited);
     }
 
-    /* cout << "start " << get<0>(start) << " . " << get<1>(start) << endl;
-    cout << "end " << get<0>(finish) << " . " << get<1>(finish) << endl; */
     int ans = INT_MAX;
     for(int i=0; i<start.size(); i++){
         flood_fill(get<0>(start[i]), get<1>(start[i]));
