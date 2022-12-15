@@ -6,9 +6,7 @@ using namespace std;
 class SensorData{
     public:
         int x;
-        tuple<int,int> beacon;
         int dist;
-        vector<tuple<int,int>> square;
 };
 
 map<int, vector<SensorData>> jjjjjj_system;
@@ -45,12 +43,7 @@ int main(){
         if(beacon_y == Y) Y_beacon.insert(beacon_x);
         SensorData sd;
         sd.x = sensor_x;
-        sd.beacon = make_tuple(beacon_x, beacon_y);
         sd.dist = abs(sensor_x-beacon_x) + abs(sensor_y-beacon_y);
-        sd.square.push_back(make_tuple(sensor_x+abs(sensor_x-beacon_x), sensor_y+abs(sensor_y-beacon_y)));
-        sd.square.push_back(make_tuple(sensor_x+abs(sensor_x-beacon_x), sensor_y-abs(sensor_y-beacon_y)));
-        sd.square.push_back(make_tuple(sensor_x-abs(sensor_x-beacon_x), sensor_y-abs(sensor_y-beacon_y)));
-        sd.square.push_back(make_tuple(sensor_x-abs(sensor_x-beacon_x), sensor_y+abs(sensor_y-beacon_y)));
 
         if(jjjjjj_system.find(sensor_y) == jjjjjj_system.end()){
             vector<SensorData> row_y_sensors;
